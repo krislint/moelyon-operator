@@ -1,0 +1,7 @@
+apiVersion: proxy.moelyon.com/v1alpha1
+kind: V2ray
+metadata:
+  name: v2ray-sample
+spec:
+  # Add fields here
+  foo: bar

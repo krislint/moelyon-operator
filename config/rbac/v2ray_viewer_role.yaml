@@ -1,0 +1,20 @@
+# permissions for end users to view v2rays.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: v2ray-viewer-role
+rules:
+- apiGroups:
+  - proxy.moelyon.com
+  resources:
+  - v2rays
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - proxy.moelyon.com
+  resources:
+  - v2rays/status
+  verbs:
+  - get

@@ -1,0 +1,24 @@
+# permissions for end users to edit v2rays.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: v2ray-editor-role
+rules:
+- apiGroups:
+  - proxy.moelyon.com
+  resources:
+  - v2rays
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - proxy.moelyon.com
+  resources:
+  - v2rays/status
+  verbs:
+  - get

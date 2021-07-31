@@ -1,0 +1,19 @@
+domain: moelyon.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: moelyon-operator
+repo: github.com/krislint/moelyon-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: moelyon.com
+  group: proxy
+  kind: V2ray
+  path: github.com/krislint/moelyon-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
